@@ -8,9 +8,9 @@ const userSchema = new mongoose.Schema({
     image: { type: String, require: true, unique: true },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    // phone_number: { type: Number, required: true, unique: true },
+    phone_number: { type: Number, required: true, unique: true },
     cartItem: { type: Object, default: {} }
 }, { minimize: false });
 
 const User = mongoose.model.User || mongoose.model('User', userSchema);
-module.exports = User;
+export default User;

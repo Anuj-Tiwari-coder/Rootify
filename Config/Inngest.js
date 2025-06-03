@@ -27,7 +27,7 @@ export const syncUserCreation = inngest.createFunction(
 // Inngest function to update user data in the database
 export const syncUserUpdation = inngest.createFunction(
     { id: "update-user-from-clerk" },
-    { event: "clerk/user.updated" }, // FIXED typo: 'clerck'
+    { event: "clerk/user.updated" },
     async ({ event }) => {
         const { id, image_url, first_name, last_name, phone_numbers, email_addresses } = event.data;
         const userData = {
@@ -38,7 +38,7 @@ export const syncUserUpdation = inngest.createFunction(
         };
 
         await connectDb();
-        await User.findByIdAndUpdate(id, userData); // FIXED typo: 'findByIdAndUpadte'
+        await User.findByIdAndUpdate(id, userData);
     }
 );
 

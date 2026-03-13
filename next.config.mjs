@@ -10,7 +10,7 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'raw.githubusercontent.com',
-                pathname: '**',
+                pathname: '*https://rootify-ecart.vercel.app/all-products*',
             },
         ],
     },
